@@ -154,6 +154,13 @@ worker_filter = st.sidebar.selectbox(
 )
 
 st.sidebar.markdown('---')
+st.sidebar.markdown(
+    "**⚠️ HOW TO TEST:**\n"
+    "1. Click the button below to open WhatsApp.\n"
+    "2. Send the message: **join smart-river** (This connects you to the live demo).\n"
+    "3. Once joined, send your location pin!"
+)
+st.sidebar.markdown('---')
 st.sidebar.link_button("💬 Chat with Bot on WhatsApp", "https://wa.me/14155238886")
 st.sidebar.caption('Click to test the wage logging flow live!')
 
