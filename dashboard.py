@@ -57,7 +57,28 @@ st.markdown(
     div[data-testid="stSidebar"] {
         background: #ffffff;
         border-right: 1px solid #e2e8f0;
-        padding-top: 1.2rem;
+        padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+        box-shadow: inset 0 0 0 1px rgba(15, 58, 95, 0.04);
+    }
+    div[data-testid="stSidebar"] .stButton > button,
+    div[data-testid="stSidebar"] a {
+        width: 100%;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+    div[data-testid="stSidebar"] a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        background: #0c6656;
+        color: white !important;
+        text-decoration: none !important;
+        margin-top: 0.75rem;
+        box-shadow: 0 8px 18px rgba(15, 118, 110, 0.12);
+    }
+    div[data-testid="stSidebar"] a:hover {
+        background: #145d4f;
     }
     .stSuccess {
         background-color: #e6fffa;
@@ -131,6 +152,10 @@ worker_filter = st.sidebar.selectbox(
     "Select Worker",
     ["All Workers", *sorted(df["phone_number"].dropna().unique().tolist())],
 )
+
+st.sidebar.markdown('---')
+st.sidebar.link_button("💬 Chat with Bot on WhatsApp", "https://wa.me/14155238886")
+st.sidebar.caption('Click to test the wage logging flow live!')
 
 if worker_filter != "All Workers":
     df = df[df["phone_number"] == worker_filter].copy()
