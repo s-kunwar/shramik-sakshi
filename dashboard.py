@@ -155,7 +155,6 @@ worker_filter = st.sidebar.selectbox(
 
 st.sidebar.markdown('---')
 st.sidebar.link_button("💬 Chat with Bot on WhatsApp", "https://wa.me/14155238886")
-st.sidebar.caption('Click to test the wage logging flow live!')
 
 if worker_filter != "All Workers":
     df = df[df["phone_number"] == worker_filter].copy()
