@@ -33,7 +33,7 @@ Millions of daily wage laborers face the constant risk of "wage theft," where co
 
 **2. Test the Live Integration:**
 To interact with the bot:
-1. Open the [Shramik Sakshi Dashboard](https://shramik-sakshi.streamlit.app/).
+1. Open the [Shramik Sakshi Dashboard](https://shramiksakshi.streamlit.app/).
 2. In the sidebar, look for the **"Chat with Bot"** button.
 3. Once in WhatsApp, send the message: `join [YOUR_SANDBOX_CODE]` (found in the sidebar).
 4. Once connected, send a **Location Pin** to log your attendance.
@@ -52,7 +52,52 @@ To interact with the bot:
 ## 💻 Local Setup
 If you would like to run this project locally:
 
-1. **Clone the repo:**
+**1. Clone the repo:**
    ```bash
    git clone [https://github.com/s-kunwar/shramik-sakshi.git](https://github.com/s-kunwar/shramik-sakshi.git)
    cd shramik-sakshi
+   ```
+
+**2. Install dependencies:**
+```bash
+pip install -r requirements.txt
+
+```
+
+**3. Set up Environment Variables:**
+Create a `.env` file in the root directory and add your keys:
+
+```env
+SUPABASE_URL="[https://your-project-id.supabase.co](https://your-project-id.supabase.co)"
+SUPABASE_KEY="your-anon-public-key"
+
+```
+
+**4. Run the Backend Server:**
+
+```bash
+uvicorn main:app --reload
+
+```
+
+**5. Expose Local Server via Ngrok:**
+
+```bash
+ngrok http 8000
+
+```
+
+*Copy the forwarding URL and paste it into your Twilio Sandbox Settings under webhook with `/webhook` at the end.*
+
+**6. Run the NGO Dashboard:**
+
+```bash
+streamlit run dashboard.py
+
+```
+
+---
+
+## ⚖️ License
+
+This project is open-source and licensed under the MIT License. Built for the community, by the community.
