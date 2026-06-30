@@ -29,7 +29,7 @@ Millions of daily wage laborers face the constant risk of "wage theft," where co
 *We recommend watching our 90-second walkthrough before testing live.*
 
 **1. Watch the Demo:**
-[🔗 View Demo Video Here] 
+[🔗 [View Demo Video Here](https://www.youtube.com/watch?v=1wTteOb_97o)] 
 
 **2. Test the Live Integration:**
 To interact with the bot:
